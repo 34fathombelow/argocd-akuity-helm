@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: addons/argocd
+    path: addons/argo-cd
     repoURL: https://github.com/34fathombelow/argocd-akuity-helm.git
     targetRevision: HEAD
   syncPolicy:

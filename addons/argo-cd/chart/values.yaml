@@ -1,0 +1,25 @@
+argo-cd:
+
+  server:
+    enabled: true
+    replicas: 1
+  resources:
+     limits:
+       memory: 128Mi
+     requests:
+       cpu: 100m
+       memory: 128Mi
+
+  controller:
+    replicas: 2
+
+  config:
+    argocd:
+      admin.enabled: 'true'
+      users.anonymous.enabled: 'true'
+    params:
+      controller.status.processors: "40"
+      controller.operation.processors: "20"
+    rbac:
+      # Never do this in production, for demo only. This will give everyone Admin access by default.
+      policy.default: role:admin

@@ -1,0 +1,9 @@
+apiVersion: v2
+name: akuity-argocd
+version: 1.0.0
+type: application
+
+dependencies:
+- name: argo-cd
+  version: 3.2.11-ak.0.0
+  repository: https://charts.akuity.io

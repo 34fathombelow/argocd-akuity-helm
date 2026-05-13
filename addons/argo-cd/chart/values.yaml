@@ -2,7 +2,7 @@ argo-cd:
 
   server:
     enabled: true
-    replicas: 1
+    replicas: 2
   resources:
      limits:
        memory: 128Mi
@@ -11,7 +11,7 @@ argo-cd:
        memory: 128Mi
 
   controller:
-    replicas: 2
+    replicas: 1
 
   config:
     argocd:

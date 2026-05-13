@@ -26699,7 +26699,7 @@ metadata:
   name: argocd-server
   namespace: argocd
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: argocd-server
@@ -26727,7 +26727,7 @@ spec:
         - /usr/local/bin/argocd-server
         env:
         - name: ARGOCD_API_SERVER_REPLICAS
-          value: "1"
+          value: "2"
         - name: REDIS_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -27848,7 +27848,7 @@ metadata:
   name: argocd-application-controller
   namespace: argocd
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: argocd-application-controller
@@ -27883,7 +27883,7 @@ spec:
               key: auth
               name: argocd-redis
         - name: ARGOCD_CONTROLLER_REPLICAS
-          value: "2"
+          value: "1"
         - name: ARGOCD_RECONCILIATION_TIMEOUT
           valueFrom:
             configMapKeyRef:

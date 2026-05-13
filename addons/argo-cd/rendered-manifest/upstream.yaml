@@ -24614,6 +24614,7 @@ data:
       - UpdateRequest
   admin.enabled: "true"
   application.resourceTrackingMethod: annotation
+  kustomize.buildOptions: --enable-helm
   users.anonymous.enabled: "true"
 ---
 # Source: akuity-argocd/charts/argo-cd/templates/config/argocd-gpg-keys-cm.yaml

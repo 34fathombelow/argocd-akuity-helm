@@ -17,6 +17,7 @@ argo-cd:
     argocd:
       admin.enabled: 'true'
       users.anonymous.enabled: 'true'
+      kustomize.buildOptions: --enable-helm
     params:
       controller.status.processors: "40"
       controller.operation.processors: "20"

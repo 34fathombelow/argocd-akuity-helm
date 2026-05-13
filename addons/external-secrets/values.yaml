@@ -1,3 +1,2 @@
-global:
-  podAnnotations:
-    argocd.argoproj.io/sync-options: Delete=confirm
+deploymentAnnotations:
+  argocd.argoproj.io/sync-options: Delete=confirm
